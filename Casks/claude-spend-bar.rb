@@ -7,7 +7,7 @@ cask "claude-spend-bar" do
   desc "Menu-bar readout of your claude.ai spend"
   homepage "https://github.com/TkachenkoBogdan/homebrew-tap"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "ClaudeSpendBar.app"
 
