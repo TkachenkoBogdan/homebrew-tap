@@ -14,7 +14,9 @@ cask "claude-spend-bar" do
   # 1.3.0 renamed the bundle from ClaudeSpendBar.app. Without this, upgrading
   # from 1.2.0 or earlier fails: brew uninstalls the old version using the
   # *current* cask definition, goes looking for the new name, and stops.
-  uninstall delete: "/Applications/ClaudeSpendBar.app"
+  # `trash:` rather than `delete:` — the latter runs under sudo and would ask
+  # every user for their password on every upgrade.
+  uninstall trash: "/Applications/ClaudeSpendBar.app"
 
   zap trash: "~/Library/Preferences/com.bt.claude-spend-bar.plist"
 
