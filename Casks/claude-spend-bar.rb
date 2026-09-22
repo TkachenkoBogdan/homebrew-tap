@@ -11,14 +11,14 @@ cask "claude-spend-bar" do
 
   app "Claude Spend Bar.app"
 
-  # 1.3.0 renamed the bundle from ClaudeSpendBar.app. Without this, upgrading
-  # from 1.2.0 or earlier fails: brew uninstalls the old version using the
-  # *current* cask definition, goes looking for the new name, and stops.
-  # `trash:` rather than `delete:` — the latter runs under sudo and would ask
-  # every user for their password on every upgrade.
-  uninstall trash: "/Applications/ClaudeSpendBar.app"
-
-  zap trash: "~/Library/Preferences/com.bt.claude-spend-bar.plist"
+  # 1.3.0 renamed the bundle from ClaudeSpendBar.app. Cleaning that up from the
+  # uninstall stanza made brew shell out to `sudo rm` on *every* upgrade, asking
+  # each user for their password, so anyone coming from 1.2.0 or earlier removes
+  # the stale bundle themselves — or just reinstalls.
+  zap trash: [
+    "~/Library/Preferences/com.bt.claude-spend-bar.plist",
+    "/Applications/ClaudeSpendBar.app",
+  ]
 
   caveats <<~EOS
     Claude Spend Bar lives in the menu bar — it has no Dock icon and no window,
