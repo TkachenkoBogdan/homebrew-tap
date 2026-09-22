@@ -6,6 +6,11 @@ Homebrew tap for my macOS tools.
 
 A menu-bar readout of your claude.ai spend.
 
+**Not a developer?** There is a download page with a disk image and
+step-by-step setup: <https://tkachenkobogdan.github.io/homebrew-tap/>
+
+With Homebrew:
+
 ```bash
 brew install --cask tkachenkobogdan/tap/claude-spend-bar
 ```

@@ -1,6 +1,6 @@
 cask "claude-spend-bar" do
-  version "1.3.0"
-  sha256 "78cd2442200aa9630331c07c821347d48b23aa701d664e0e783a4e8ab66d1a86"
+  version "1.4.0"
+  sha256 "2c38bc8461744727c48412148a581e3d40e25e8d8c6732d4ab77804e20be693a"
 
   url "https://github.com/TkachenkoBogdan/homebrew-tap/releases/download/v#{version}/ClaudeSpendBar.zip"
   name "Claude Spend Bar"
@@ -19,10 +19,16 @@ cask "claude-spend-bar" do
   zap trash: "~/Library/Preferences/com.bt.claude-spend-bar.plist"
 
   caveats <<~EOS
-    Claude Spend Bar lives in the menu bar — it has no Dock icon and no window.
+    Claude Spend Bar lives in the menu bar — it has no Dock icon and no window,
+    and brew does not start it. Launch it once:
 
-    On first launch, click the mark in the menu bar and choose "Set session
-    key…" to paste your claude.ai session key. It is stored in your login
-    Keychain and sent only to claude.ai.
+      open -a "Claude Spend Bar"
+
+    A clay triangle appears at the top right of your screen. Click it and choose
+    "Set session key…" to paste your claude.ai session key; it is stored in your
+    login Keychain and sent only to claude.ai.
+
+    It adds itself to your login items on that first run, so it is there after a
+    restart. Turn that off in its settings if you would rather it did not.
   EOS
 end
