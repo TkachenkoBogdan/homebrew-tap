@@ -1,20 +1,20 @@
 cask "claude-spend-bar" do
-  version "1.2.0"
-  sha256 "c91ff4997cbb8db349cbd9c5e1e95286fa0fca2e273da3f1a996dd92abbfccef"
+  version "1.3.0"
+  sha256 "78cd2442200aa9630331c07c821347d48b23aa701d664e0e783a4e8ab66d1a86"
 
   url "https://github.com/TkachenkoBogdan/homebrew-tap/releases/download/v#{version}/ClaudeSpendBar.zip"
-  name "ClaudeSpendBar"
+  name "Claude Spend Bar"
   desc "Menu-bar readout of your claude.ai spend"
   homepage "https://github.com/TkachenkoBogdan/homebrew-tap"
 
   depends_on macos: :sonoma
 
-  app "ClaudeSpendBar.app"
+  app "Claude Spend Bar.app"
 
   zap trash: "~/Library/Preferences/com.bt.claude-spend-bar.plist"
 
   caveats <<~EOS
-    ClaudeSpendBar lives in the menu bar — it has no Dock icon and no window.
+    Claude Spend Bar lives in the menu bar — it has no Dock icon and no window.
 
     On first launch, click the mark in the menu bar and choose "Set session
     key…" to paste your claude.ai session key. It is stored in your login
