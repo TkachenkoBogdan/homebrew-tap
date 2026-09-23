@@ -1,12 +1,15 @@
 cask "claude-spend-bar" do
-  version "1.4.3"
-  sha256 "951771e7834c322223b4d0e177726efa8cbbcbaca658edff83dd54361ca8a04d"
+  version "1.5.0"
+  sha256 "a56952977d9e7032c9c7203bf7ce12000b04eea72c1f725aa10a8b5473879791"
 
   url "https://github.com/TkachenkoBogdan/homebrew-tap/releases/download/v#{version}/ClaudeSpendBar.zip"
   name "Claude Spend Bar"
   desc "Menu-bar readout of your claude.ai spend"
   homepage "https://github.com/TkachenkoBogdan/homebrew-tap"
 
+  # The app updates itself with Sparkle from 1.5.0, so brew leaves an
+  # installed copy alone on `brew upgrade` rather than reinstalling it.
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Claude Spend Bar.app"
