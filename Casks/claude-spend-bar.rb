@@ -1,6 +1,6 @@
 cask "claude-spend-bar" do
-  version "1.6.0"
-  sha256 "ddabff115e72914c8fe3e52724a871b01f990e60f7b7744a2ece5a71bf6aa0f5"
+  version "1.7.0"
+  sha256 "7014836783b73282799dc01498ae2d36123f7c1dcea0593271c6fdfd072afaf5"
 
   url "https://github.com/TkachenkoBogdan/homebrew-tap/releases/download/v#{version}/ClaudeSpendBar.zip"
   name "Claude Spend Bar"
