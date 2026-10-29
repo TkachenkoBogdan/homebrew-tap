@@ -9,6 +9,10 @@ cask "claude-spend-bar" do
 
   # The app updates itself with Sparkle from 1.5.0, so brew leaves an
   # installed copy alone on `brew upgrade` rather than reinstalling it.
+  # Renamed: new installs use the norn cask. This one stays loadable so
+  # existing installs can still be upgraded and uninstalled.
+  deprecate! date: "2026-10-29", because: "is now Norn", replacement_cask: "norn"
+
   auto_updates true
   depends_on macos: :sonoma
 
