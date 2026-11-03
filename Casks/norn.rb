@@ -1,6 +1,6 @@
 cask "norn" do
-  version "3.1.1"
-  sha256 "b615b3078e0fea965cd86b51e82a81e945effc0340e3419b5113b1b960ae0ea5"
+  version "3.1.2"
+  sha256 "c35b62fd6fee39e40646fc6189a31bda0174912f8e3e4026a2dbc71f1cc8b692"
 
   url "https://github.com/TkachenkoBogdan/homebrew-tap/releases/download/v#{version}/Norn.zip"
   name "Norn"
